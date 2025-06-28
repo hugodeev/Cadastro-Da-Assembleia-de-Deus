@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro - Encontro de Casais</title>
+        <link rel="shortcut icon" href="src/img/logo assembleia de deus.png" type="image/x-icon">
+        <link rel="stylesheet" href="src/css/cadastro.css">
+
+    </head>
+
+    <body>
+
+        <header>
+            <div class="cabeçalho">
+                <h1 class="titulo-do-cabeçalho">
+                    Encontro de Casais
+                </h1>
+            </div>
+        </header>
+        
+        <div class="responsivelmain">
+
+            <main>
+
+                        <!--Área Inicial-->
+                        <div class="home-inicial">
+
+                            <div class="card-text">
+
+                                <h3 class="titulo-do-home-inicial">
+                                    Encontro de Casais
+                                </h3>
+
+                                <p class="paragrafo-do-titul-inicial">
+                                    Uma noite especial, à luz de velas, sabores marcantes <br> e momentos inesquecíveis ao lado de quem você ama.
+                                </p>
+
+                                <a href="#area-meio-exportacao"><button class="btn-home-inicial">Cadastrar Agora</button></a>
+                            </div>
+
+                            <div class="card-img">
+                                <img src="src/img/casal-home.png" alt="Imagem - Casal" class="casal-img">
+                            </div>
+
+                        </div>
+
+                        <!--Área Meio > Formulário-->
+
+                        <div class="meio-main">
+
+                            <div class="card-passos">
+                                <h1 class="card-titulo-passos">Passo 1: Realize o <br> pagamento</h1>
+                                <p class="card-paragrafo-passos">Você deve efetuar o pagamento da inscrição por Pix, utilizando uma das formas abaixo: Escaneando QR Code fornecido na imagem abaixo ou envie o valor para o número de telefone.</p>
+                            </div>
+
+                            <div class="card-passos">
+                                <h1 class="card-titulo-passos">Passo 2: Preencha o formulário</h1>
+                                <p class="card-paragrafo-passos">Preencha todos os campos solicitados no formulário: Nome do esposo, Nome da esposa, Telefone, Cidade e marque a caixa para confirmar que o pagamento foi concluído.</p>
+                            </div>
+
+                            <div class="card-passos">
+                                <h1 class="card-titulo-passos">Passo 3: Clique no <br> botão "Enviar"</h1>
+                                <p class="card-paragrafo-passos">Depois de preencher tudo: Clique no botão "Enviar", Aguarde alguns segundos... e uma mensagem aparecerá confirmando: “Dados enviados com sucesso”</p>
+                            </div>
+
+                        </div>
+
+            </main>
+
+            <footer>
+
+                <section id="area-meio-exportacao">
+
+                            <div class="area-meio">
+                                
+                                <div>
+
+                                    <h3 class="titulo-meio-site">
+                                            Faça seu cadastro, para participa <br> do Encontro de Casais.
+                                    </h3>
+
+                                    <div class="area-pagamento">
+
+                                        <div class="card-pagamento">
+
+                                                <img src="src/img/Qrcode-Eli.jpg" class="chave-pix" alt="Chave Pix: QRcode">
+
+                                                <p class="paragrafo-chave-pix"> Aponte a Câmera do Seu <br> Celular para o QR code</p>
+                                            
+                                        </div>
+                                                <br>
+                                        <div class="card-pagamento">
+
+                                            <img src="src/img/logo-pix.jpg" class="logo-pix" alt="Chave Pix: QRcode"> 
+
+                                            <p class="paragrafo-chave-pix-telefone">Chave Pix: (83) 99951-5631 <br> Eliezer Pereira De França</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <form class="formulario" method="get">
+
+                                        <div>
+                                            <h1 class="titulo-do-formulario">Cadastro</h1>
+                                        </div>
+                                    
+                                        <div class="inputs-do-formulario">
+                                    
+                                        <p>
+                                            <label for="nome" class="inputs-de-entradas"><h2>Nome do esposo:</h2></label>
+                                            <input type="text" required minlength="8" name="nome" id="nome" placeholder="Nome completo" class="caixa-de-inputs" required >
+                                        </p>
+                                    
+                                        <p>
+                                            <label for="cargo" class="inputs-de-entradas"><h2>Nome da esposa:</h2></label>
+                                            <input type="text" required  minlength="8" name="cargo" id="cargo" placeholder="Nome completo" class="caixa-de-inputs">
+                                        </p>
+                                    
+                                        <p>
+                                            <label for="denominacao" class="inputs-de-entradas"><h2>Telefone:</h2></label>
+                                            <input type="text" required  
+                                            minlength="9" name="denominacao" id="denominacao" placeholder="Número" class="caixa-de-inputs">
+                                        </p>
+                                    
+                                        <p>
+                                            <label for="cidade" class="inputs-de-entradas"><h2>Cidade:</h2></label>
+                                            <input type="text" required  name="cidade" id="cidade" placeholder="Onde você mora" class="caixa-de-inputs">
+                                        </p>
+                                    
+                                        <p>
+                                            <input type="submit" value="Enviar" id="bttn-enviar">
+                                        </p>
+                                    
+                                        </div>
+                                    
+                                </form>
+
+                            </div>
+
+                </section>
+
+            </footer>
+            
+        </div>
+    
+        <script src="src/js/cadastro.js"></script>
+
+    </body>
+
+</html>
