@@ -15,7 +15,7 @@ body{
 
 .responsivelmain{
     min-width: 100px;
-    max-width: 1300px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -49,13 +49,14 @@ body{
 .titulo-do-home-inicial{
     font-size: 40px;
     color: rgb(138, 88, 7);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
 }
 
 .paragrafo-do-titul-inicial{
     font-size: 18px;
     color: rgb(138, 88, 7);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 20px;
 }
 
@@ -73,15 +74,15 @@ body{
 
 .card-img{
     background-color: #6e1c1c;
-    height: 555px;
-    margin-top: 30px;
+    height: 535px;
+    margin-top: 50px;
     border-radius: 120px 30px 0px 0px;
     border: 4px solid #fffffff5;
     width: 380px;
 }
 
 .casal-img{
-    height: 500px;
+    height: 480px;
     padding: 45px;
     margin-top: 10px;
 }
@@ -309,7 +310,7 @@ body{
 /* Main > Home Inicial */
 
 .card-text{
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .titulo-do-home-inicial{
@@ -333,14 +334,14 @@ body{
 }
 
 .card-img{
-    height: 445px;
+    height: 425px;
     width: 330px;
     margin: auto;
     margin-top: 100px;
 }
 
 .casal-img{
-    height: 400px;
+    height: 380px;
     width: 240px;
     padding: 45px;
     margin-top: 0px;
