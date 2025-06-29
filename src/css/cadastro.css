@@ -285,8 +285,8 @@ body{
 
 .area-pagamento{
     display: blck;
-    gap: 40px;
-    width: 280px;
+    gap: 20px;
+    width: 100%;
 }
 
 .card-pagamento{
@@ -334,7 +334,7 @@ body{
 
 .card-img{
     height: 445px;
-    width: 300px;
+    width: 330px;
     margin: auto;
     margin-top: 100px;
 }
@@ -388,7 +388,7 @@ body{
 .chave-pix{
     width: 100px;
     margin-top: 80px;    
-    margin-left: 30px;
+    margin-left: 53px;
 }
 
 .logo-pix{
@@ -407,9 +407,18 @@ body{
 
 .paragrafo-chave-pix-telefone{
     text-align: center;
-    margin-left: 10px;
+    margin-left: 0px;
     margin-top: 25px;
     font-size: 13px;
+}
+
+.formulario{
+    margin-top: 60px;
+    width: 320px;
+}
+
+.caixa-de-inputs{
+    width: 270px;
 }
 
 
