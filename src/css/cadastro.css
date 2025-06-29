@@ -32,7 +32,7 @@ body{
     padding: 20px;
     color: rgb(201, 199, 193);
     font-size: 26px;  
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Main > Home Inicial */
@@ -49,7 +49,7 @@ body{
 .titulo-do-home-inicial{
     font-size: 40px;
     color: rgb(138, 88, 7);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .paragrafo-do-titul-inicial{
@@ -261,8 +261,6 @@ body{
 
 
 /* Configuração mobile */
-
-
 .responsivelmain{   
     width: 100%;
     margin: 0;
@@ -280,13 +278,14 @@ body{
 
 .area-meio{
     display: block;
-    height: 100%;
+    height: 1050px;
     justify-items: center;
+    border-radius: 10px 200px 0px 0px;
 }
 
 .area-pagamento{
-    display: block;
-    gap: 50px;
+    display: blck;
+    gap: 40px;
     width: 280px;
 }
 
@@ -314,34 +313,35 @@ body{
 }
 
 .titulo-do-home-inicial{
-    font-size: 20px;
+    font-size: 30px;
     margin-left: 15px;
 }
 
 .paragrafo-do-titul-inicial{
-    font-size: 15px;
+    font-size: 18px;
     margin-top:10px;
     padding: 15px;
+    text-align: justify;
 }
 
 .btn-home-inicial{
     margin-top: 10px;
-    width: 120px;
-    height: 35px;
-    font-size: 13px;
+    width: 140px;
+    height: 40px;
+    font-size: 14px;
     margin-left: 15px;
 }
 
 .card-img{
     height: 445px;
-    width: 270px;
+    width: 300px;
     margin: auto;
     margin-top: 100px;
 }
 
 .casal-img{
     height: 400px;
-    width: 200px;
+    width: 240px;
     padding: 45px;
     margin-top: 0px;
 }
@@ -354,7 +354,7 @@ body{
 
 .card-passos{
     background-color: #6e1c1c;
-    width: 250px;
+    width: 290px;
     height: 250px;
     border-radius: 90px 20px 80px 20px;
     border: 4px solid #ffffffdd;
@@ -364,7 +364,7 @@ body{
 .card-titulo-passos{
     text-align: center;
     margin-top: 35px;
-    font-size: 15px;
+    font-size: 18px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -372,7 +372,7 @@ body{
     text-align: center;
     padding: 20px;
     margin-top: 15px;
-    font-size: 12px;
+    font-size: 14px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -383,20 +383,18 @@ body{
     margin-right: 10px;
     color: rgb(138, 88, 7);
     background-color: #0000001a;
-
 }
-
 
 .chave-pix{
     width: 100px;
     margin-top: 80px;    
-    margin-left: 60px;
+    margin-left: 30px;
 }
 
 .logo-pix{
     width: 100px;
     margin-top: 115px;    
-    margin-left: 55px;
+    margin-left: 40px;
     border-radius: 10px;
 }
 
@@ -404,14 +402,14 @@ body{
     text-align: center;
     margin-left: 20px;
     margin-top: 15px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .paragrafo-chave-pix-telefone{
     text-align: center;
     margin-left: 10px;
     margin-top: 25px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 
