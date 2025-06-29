@@ -242,18 +242,17 @@ body{
    background-color: #d8cfcf;
 }
 
+.aviso-final{
+    background-color: rgba(255, 0, 0, 0.135);
+    margin-top: 20px;
+    width: 420px;
+    padding: 10px;
+    border-radius: 30px 5px 30px 5px;
+    margin-left: 18px;
+}
+
 /* Footer > Rodapé Final */
 
-.rodapé-final{
-    text-align: justify;
-    margin-top: 30px;
-    padding: 10px;
-    background-color: #023c42;
-    color: white;
-    font-size: 11px;
-    width: 100%;
-    height: 300px;
-}
 
 
 /* Telas de celulares */
@@ -334,14 +333,14 @@ body{
 }
 
 .card-img{
-    height: 425px;
+    height: 415px;
     width: 330px;
     margin: auto;
     margin-top: 100px;
 }
 
 .casal-img{
-    height: 380px;
+    height: 370px;
     width: 240px;
     padding: 45px;
     margin-top: 0px;
@@ -355,8 +354,8 @@ body{
 
 .card-passos{
     background-color: #6e1c1c;
-    width: 290px;
-    height: 250px;
+    width: 310px;
+    height: 230px;
     border-radius: 90px 20px 80px 20px;
     border: 4px solid #ffffffdd;
     margin-top: 60px;
@@ -365,7 +364,7 @@ body{
 .card-titulo-passos{
     text-align: center;
     margin-top: 35px;
-    font-size: 18px;
+    font-size: 22px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -373,7 +372,7 @@ body{
     text-align: center;
     padding: 20px;
     margin-top: 15px;
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -420,6 +419,16 @@ body{
 
 .caixa-de-inputs{
     width: 270px;
+}
+
+.aviso-final{
+    background-color: rgba(255, 0, 0, 0.135);
+    margin-top: 20px;
+    width: 320px;
+    padding: 10px;
+    border-radius: 30px 5px 30px 5px;
+    margin: auto;
+    margin-top: 20px;
 }
 
 
