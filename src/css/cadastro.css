@@ -64,12 +64,12 @@ body{
     background-color: #6e1c1c;
     border: none;
     border-radius: 5px;
-    color: rgb(223, 222, 221);
+    color: rgb(208, 205, 202);
     margin-top: 30px;
     width: 170px;
     height: 35px;
     font-size: 17px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .card-img{
@@ -280,11 +280,11 @@ body{
     display: block;
     height: 1050px;
     justify-items: center;
-    border-radius: 10px 200px 0px 0px;
+    margin-top: 100px;
+    border-radius: 10px 120px 0px 0px;
 }
 
 .area-pagamento{
-    display: blck;
     gap: 20px;
     width: 100%;
 }
@@ -363,7 +363,7 @@ body{
 
 .card-titulo-passos{
     text-align: center;
-    margin-top: 35px;
+    margin-top: 30px;
     font-size: 22px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -371,18 +371,18 @@ body{
 .card-paragrafo-passos{
     text-align: center;
     padding: 20px;
-    margin-top: 15px;
+    margin-top: 10px;
     font-size: 16px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* footer > área final > */
 .titulo-meio-site{
-    margin-top: 50px;
-    font-size: 20px;
+    margin-top: 35px;
+    font-size: 18px;
     margin-right: 10px;
-    color: rgb(138, 88, 7);
-    background-color: #0000001a;
+    color: rgb(203, 203, 203);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .chave-pix{
@@ -430,7 +430,5 @@ body{
     margin: auto;
     margin-top: 20px;
 }
-
-
 
 }
