@@ -31,3 +31,31 @@ document.querySelector('.formulario').addEventListener('submit', function(event)
       enviarBtn.value = "Enviar"; // Voltar o texto original
     });
 });
+
+  // Valor máximo de vagas
+  const MAX_VAGAS = 100;
+
+  // Pega o número atual de inscritos do localStorage ou começa com 0
+  let inscritos = localStorage.getItem("inscritos") || 0;
+
+  // Atualiza o texto das vagas na tela
+  function atualizarVagas() {
+    document.querySelector(".log-vagas").textContent = `Vagas ${inscritos}/${MAX_VAGAS}`;
+  }
+
+  atualizarVagas(); // Chama ao abrir a página
+
+  // Escuta o envio do formulário
+  document.querySelector(".formulario").addEventListener("submit", function(e) {
+    e.preventDefault(); // Impede o envio real do formulário
+
+    if (inscritos >= MAX_VAGAS) {
+      alert("Todas as vagas foram preenchidas.");
+      return;
+    }
+
+    inscritos++;
+    localStorage.setItem("inscritos", inscritos); // Atualiza o número de inscritos
+    atualizarVagas(); // Atualiza na interface
+    this.reset(); // Limpa o formulário
+  });
