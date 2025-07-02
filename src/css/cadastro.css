@@ -80,8 +80,8 @@ body{
     margin-top: 30px;
     width: 170px;
     height: 35px;
-    font-size: 17px;
-    font-family: "Dancing Script", cursive;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
 }
 
 .card-img{
@@ -218,6 +218,33 @@ body{
     color: rgb(235, 232, 232);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      background-color: #1d9248;
+      color: white;
+      border: none;
+      padding: 12px 10px;
+      border-radius: 8px;
+      font-size: 13px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      margin-top: 15px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #0f4926;
+    }
+
+    .whatsapp-btn img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      border-radius: 5px;
+    }
 
 /* footer > área final > formulário*/
 
@@ -462,13 +489,13 @@ body{
 
 .chave-pix{
     width: 100px;
-    margin-top: 80px;    
+    margin-top: 50px;    
     margin-left: 49px;
 }
 
 .logo-pix{
     width: 100px;
-    margin-top: 115px;    
+    margin-top: 83px;    
     margin-left: 38px;
     border-radius: 10px;
 }
@@ -505,5 +532,6 @@ body{
     margin: auto;
     margin-top: 20px;
 }
+
 
 }
