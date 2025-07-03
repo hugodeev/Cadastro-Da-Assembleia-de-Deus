@@ -39,8 +39,11 @@ Além disso, foi uma ótima oportunidade de praticar front-end e aplicar conceit
 
 ## 🙋‍♂️ Autor
 
-Feito com dedicação por **Victor Hugo Matias Salustino**  
-📧 [Seu e-mail ou rede social, se quiser incluir]
+> **Victor Hugo Matias Salustino**
+
+> **Email: hugo353637@gmail.com**
+
+> **Linkedin: https://www.linkedin.com/in/hugomathais/** 
 
 ---
 
