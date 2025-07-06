@@ -1,61 +1,100 @@
+// Importações Firebase (deve estar num módulo JS com suporte ESM)
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+import { getDatabase, ref, onValue, get, set } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
 
+// Configuração do Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyANixu7VTzveDAQbibARZEYw19FTMAmtVI",
+  authDomain: "cadastro-do-ec.firebaseapp.com",
+  databaseURL: "https://cadastro-do-ec-default-rtdb.firebaseio.com",
+  projectId: "cadastro-do-ec",
+  storageBucket: "cadastro-do-ec.appspot.com",
+  messagingSenderId: "908715266580",
+  appId: "1:908715266580:web:802dd4159752f7652fcd01",
+  measurementId: "G-FVMTJCLL9F"
+};
 
-document.querySelector('.formulario').addEventListener('submit', function(event) {
-  event.preventDefault(); // Impede o envio padrão do formulário
-  
-  // Desabilitar o botão Enviar para evitar envios múltiplos
-  const enviarBtn = document.querySelector('#bttn-enviar');
-  enviarBtn.disabled = true;
-  enviarBtn.value = "Enviando..."; // Atualiza o texto do botão para indicar envio
+// Inicializa o Firebase
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 
-  // Coletar os dados do formulário
-  const nome = document.querySelector('#nome').value;
-  const cargo = document.querySelector('#cargo').value;
-  const denominacao = document.querySelector('#denominacao').value;
-  const cidade = document.querySelector('#cidade').value;
-  
-  // Montar a URL com os parâmetros do formulário
-  const url = `https://script.google.com/macros/s/AKfycbxioa9KNFnYaStqu2UZmiUSxamSi3S5PiPnxZqTenWvOCkWiqqKOdmqI_549v3QN99YIw/exec?nome=${encodeURIComponent(nome)}&cargo=${encodeURIComponent(cargo)}&denominacao=${encodeURIComponent(denominacao)}&cidade=${encodeURIComponent(cidade)}`;
-  
-  // Enviar os dados para a API via GET
-  fetch(url)
-    .then(response => response.text()) // Esperar por texto simples, não JSON
-    .then(data => {
-      alert(data); // Exibe a resposta do servidor
-      enviarBtn.value = "Enviado"; // Atualiza o botão após o envio
-    })
-    .catch(error => {
-      console.error('Erro:', error);
-      alert('Houve um erro ao enviar os dados.');
-      enviarBtn.disabled = false; // Reabilitar o botão em caso de erro
-      enviarBtn.value = "Enviar"; // Voltar o texto original
-    });
+const inscritosRef = ref(db, "inscritos");
+const MAX_VAGAS = 100;
+
+// Atualiza contador de vagas na tela
+function atualizarVagas(qtd) {
+  const vagasEl = document.querySelector(".log-vagas");
+  if (vagasEl) vagasEl.textContent = `Vagas ${qtd}/${MAX_VAGAS}`;
+}
+
+// Atualiza contador quando Firebase muda
+onValue(inscritosRef, (snapshot) => {
+  const qtd = snapshot.val() || 0;
+  atualizarVagas(qtd);
 });
 
-  // Valor máximo de vagas
-  const MAX_VAGAS = 100;
+// Evento DOM ready
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".formulario");
+  const btnEnviar = document.querySelector("#bttn-enviar");
 
-  // Pega o número atual de inscritos do localStorage ou começa com 0
-  let inscritos = localStorage.getItem("inscritos") || 0;
+  if (!form || !btnEnviar) return;
 
-  // Atualiza o texto das vagas na tela
-  function atualizarVagas() {
-    document.querySelector(".log-vagas").textContent = `Vagas ${inscritos}/${MAX_VAGAS}`;
-  }
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  atualizarVagas(); // Chama ao abrir a página
+    // Bloqueio máximo vagas
+    btnEnviar.disabled = true;
 
-  // Escuta o envio do formulário
-  document.querySelector(".formulario").addEventListener("submit", function(e) {
-    e.preventDefault(); // Impede o envio real do formulário
+    // Inicia animação dos pontinhos no botão
+    let dots = 0;
+    btnEnviar.value = "Enviando";
+    const intervalId = setInterval(() => {
+      dots = (dots + 1) % 4; // 0..3
+      btnEnviar.value = "Enviando" + ".".repeat(dots);
+    }, 500);
 
-    if (inscritos >= MAX_VAGAS) {
-      alert("Todas as vagas foram preenchidas.");
-      return;
+    try {
+      const snapshot = await get(inscritosRef);
+      let inscritos = snapshot.val() || 0;
+
+      if (inscritos >= MAX_VAGAS) {
+        clearInterval(intervalId);
+        alert("Todas as vagas foram preenchidas.");
+        btnEnviar.value = "Vagas Esgotadas";
+        return;
+      }
+
+      // Coleta os dados do formulário
+      const nome = document.querySelector('#nome').value;
+      const cargo = document.querySelector('#cargo').value;
+      const denominacao = document.querySelector('#denominacao').value;
+      const cidade = document.querySelector('#cidade').value;
+
+      // URL do Google Script com parâmetros
+      const url = `https://script.google.com/macros/s/AKfycbxioa9KNFnYaStqu2UZmiUSxamSi3S5PiPnxZqTenWvOCkWiqqKOdmqI_549v3QN99YIw/exec?nome=${encodeURIComponent(nome)}&cargo=${encodeURIComponent(cargo)}&denominacao=${encodeURIComponent(denominacao)}&cidade=${encodeURIComponent(cidade)}`;
+
+      // Envia para o Google Script
+      const response = await fetch(url);
+      const data = await response.text();
+
+      // Atualiza Firebase com mais um inscrito
+      await set(inscritosRef, inscritos + 1);
+
+      clearInterval(intervalId);
+
+      alert(data); // Mostra a mensagem da API Google Script
+
+      form.reset();
+      btnEnviar.value = "Enviado!";
+      // mantém botão desabilitado para evitar novo envio sem reload
+
+    } catch (error) {
+      clearInterval(intervalId);
+      console.error("Erro ao enviar:", error);
+      alert("Houve um erro ao enviar os dados.");
+      btnEnviar.value = "Enviar";
+      btnEnviar.disabled = false;
     }
-
-    inscritos++;
-    localStorage.setItem("inscritos", inscritos); // Atualiza o número de inscritos
-    atualizarVagas(); // Atualiza na interface
-    this.reset(); // Limpa o formulário
   });
+});
