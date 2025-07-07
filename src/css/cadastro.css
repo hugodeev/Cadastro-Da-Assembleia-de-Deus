@@ -30,6 +30,7 @@ body{
     position: fixed;
     top: 0;
     display: flex;
+    z-index: 1000;
     justify-content: space-between;
 }
 
@@ -94,6 +95,8 @@ body{
 }
 
 .casal-img{
+    position: relative; 
+    z-index: 1;
     height: 535px;
     width: 380px;
     padding: 0px;
