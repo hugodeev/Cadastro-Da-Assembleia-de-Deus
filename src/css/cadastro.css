@@ -94,11 +94,13 @@ body{
 }
 
 .casal-img{
-    height: 400px;
-    padding: 10px;
-    margin-top: 125px;
+    height: 535px;
+    width: 380px;
+    padding: 0px;
+    margin-top: 0px;
     margin-left: 0px;
-    filter: brightness(65%);
+    border-radius: 120px 30px 0px 0px;
+    filter: brightness(55%);
 }
 
 .btn-data{
@@ -410,18 +412,18 @@ body{
 }
 
 .card-img{
-    height: 415px;
+    height: 385px;
     width: 330px;
     margin: auto;
     margin-top: 100px;
 }
 
 .casal-img{
-    height: 350px;
-    width: 280px;
-    padding: 5px;
-    margin-top: 60px;
-    margin-left: 20px;
+    height: 385px;
+    width: 330px;
+    padding: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
 }
 
 .data-evento{
