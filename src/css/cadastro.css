@@ -94,9 +94,11 @@ body{
 }
 
 .casal-img{
-    height: 480px;
-    padding: 45px;
-    margin-top: 10px;
+    height: 400px;
+    padding: 10px;
+    margin-top: 125px;
+    margin-left: 0px;
+    filter: brightness(65%);
 }
 
 .btn-data{
@@ -415,10 +417,11 @@ body{
 }
 
 .casal-img{
-    height: 370px;
-    width: 240px;
-    padding: 45px;
-    margin-top: 0px;
+    height: 350px;
+    width: 280px;
+    padding: 5px;
+    margin-top: 60px;
+    margin-left: 20px;
 }
 
 .data-evento{
