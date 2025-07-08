@@ -11,7 +11,7 @@
 }
 
 body{
-    background-color: #c8caca;
+    background-color: #ffffff;
     color: rgb(255, 255, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -24,7 +24,7 @@ body{
 
 /*Header - cabeçalho*/
 .cabeçalho{
-    background-color: #A90610;   
+    background-color: #92111a;
     height: 70px;
     width: 100%;
     position: fixed;
@@ -35,24 +35,33 @@ body{
 }
 
 .titulo-do-cabeçalho{
-    padding: 20px;
+    padding: 13px;
     color: rgb(201, 199, 193);
     font-size: 26px;  
     font-family: "Poppins", sans-serif;
 }
 
 .log-vagas{
-    padding: 20px;
+    padding: 25px;
     color: rgb(201, 199, 193);
     font-size: 12px;  
     font-family: "Poppins", sans-serif;
 }
 
 /* Main > Home Inicial */
+
+.responsividade-header-home{
+        background-color: #E3E3E3;
+}
+
 .home-inicial{
+    max-width: 1400px;
+    margin: auto;
     display: flex;
     justify-content: space-around;
     margin-top: 70px;
+    height: 700px;
+    background-color: #E3E3E3;
 }
 
 .card-text{
@@ -74,7 +83,7 @@ body{
 }
 
 .btn-home-inicial{
-    background-color: #6e1c1c;
+    background-color: #92111a;
     border: none;
     border-radius: 5px;
     color: rgb(208, 205, 202);
@@ -86,19 +95,19 @@ body{
 }
 
 .card-img{
-    background-color: #6e1c1c;
+    background-color: #92111a;
     height: 500px;
     margin-top: 50px;
     border-radius: 120px 30px 0px 0px;
     border: 4px solid #fffffff5;
-    width: 350px;
+    width: 450px;
 }
 
 .casal-img{
     position: relative; 
     z-index: 1;
     height: 500px;
-    width: 350px;
+    width: 450px;
     padding: 0px;
     margin-top: 0px;
     margin-left: 0px;
@@ -119,18 +128,27 @@ body{
 }
 
 /* Main > Passos do cadastro */
+.responsividade-meio-main{
+    background-color: #f8f6f6;
+}
+
 .meio-main{
     display: flex;
     justify-content: space-evenly;
-    margin-top: 250px;
+    margin-top: 0px;
+    max-width: 1400px;
+    margin: auto;
+    background-color: #f8f6f6;
 }
 
 .card-passos{
-    background-color: #6e1c1c;
+    background-color: #92111a;
     width: 220px;
     height: 220px;
+    margin-top: 240px;
     border-radius: 90px 20px 80px 20px;
     border: 4px solid #ffffffdd;
+    margin-bottom: 200px;
 }
 
 .card-titulo-passos{
@@ -149,9 +167,10 @@ body{
 }
 
 .card-passos-aviso{
-    background-color: #6e1c1c;
+    background-color: #92111a;
     width: 220px;
     height: 220px;
+    margin-top: 240px;
     border-radius: 90px 20px 80px 20px;
     border: 4px solid #ffffffdd;
 }
@@ -166,14 +185,20 @@ body{
 
 /* footer > área final > */
 
+.responsividade-footer-final{
+    background-color: #92111a; 
+}
+
 .area-meio{
     display: flex;
+    max-width: 1400px;
+    margin: auto;
     justify-content: space-evenly;
-    background-color: #6e1c1c;
-    border-radius: 00px 8000px 0px 0px ;
-    margin-top: 200px;
+    background-color: #92111a;
+    border-radius:  0px ;
+    margin-top: 0px;
     height: 680px;
-    border: 4px solid #ffffffd8;
+   
 }
 
 .titulo-meio-site{
@@ -262,13 +287,13 @@ body{
     margin-top: 120px;
     height: 500px;
     border-radius: 15px;
-    border: 4px solid#943f40;
+    border: 4px solid #bf5759;
     font-size: 14px;
 }
 
 .titulo-do-formulario{
     text-align: center;
-    background-color:#943f40;
+    background-color:#892224;
     border-radius: 10px 10px 0px 0px;
     height: 40px;
     padding: 10px;
@@ -352,6 +377,7 @@ body{
     display: block;
     width: 100%;
     margin-top: 10px;
+    height: 820px;
 }
 
 .meio-main{
@@ -392,7 +418,7 @@ body{
 /* Main > Home Inicial */
 
 .card-text{
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .titulo-do-home-inicial{
@@ -416,7 +442,7 @@ body{
 }
 
 .card-img{
-    height: 385px;
+    height: 450px;
     width: 100%;
     margin: auto;
     margin-top: 0px;
@@ -425,7 +451,7 @@ body{
 }
 
 .casal-img{
-    height: 385px;
+    height: 470px;
     width: 100%;
     padding: 0px;
     margin-top: 0px;
@@ -443,8 +469,9 @@ body{
 
 /* Main > Passos do cadastro */
 .meio-main{
-    margin-top: 100px;
+    margin-top: 0px;
     justify-items: center;
+    background-color: #ffffff;
 }
 
 .card-passos{
@@ -453,7 +480,8 @@ body{
     height: 236px;
     border-radius: 90px 20px 80px 20px;
     border: 4px solid #ffffffdd;
-    margin-top: 60px;
+    margin-top: 100px;
+    margin-bottom: 0px;
 }
 
 .card-titulo-passos{
